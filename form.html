@@ -3,86 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <link rel="stylesheet" href="portfolio.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2family=Lato:wght@100;400;700&family=Poppins:wght@200&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2family=Poppins:wght@200&display=swap" rel="stylesheet" />
     <style>
-        .body{
-            background-color: bisque;
+        body{
+            background-image: url('/images/istockphoto-1980423570-1024x1024-transformed.jpeg');
         }
-        .formlist{
-            margin:auto;
-            border:2px solid black;
-            height:400px;
-            padding:6rem;
-        }
-        button {
-            padding: 10px 20px;
-            margin-right: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-
-        button[type="submit"] {
-            background-color:black; 
-            color: white;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #45a049; 
-        }
-
-        button[type="button"] {
-            background-color: #f44336; 
-            color: white;
-        }
-
-        button[type="button"]:hover {
-            background-color: #d32f2f;
-        }
-        
     </style>
+    <title>PORTFOLIO</title>
 </head>
 <body>
-    <div class="formlist">
-    <h2>Student Registration Form</h2>
+    <header>
+        <div class="container">
+            <nav class="flex items-centre justify-right">
+                <div class="left flex justify-right">
+                    <div>
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Projects</a>
+                        <a href="#">More</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <button class="btn btn-primary"><a href="form.html">Contact</a></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+  <form method="post"> <h2>Contact Us</h2>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" name="phone" id="phone" placeholder="Enter your phone number">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="Enter your email address">
+    </div>
+    <div class="form-group">
+      <label for="comments">Comments:</label>
+      <textarea name="comments" id="comments" rows="5" placeholder="Leave your comments here"></textarea>
+    </div>
+    <div class="button-group">
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+
+</body>
+</html>
 
     
-    <form action="/register" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required><br><br>
-
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender" required>
-            <option value="">Select</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select><br><br>
-
-        <label for="address">Address:</label>
-        <textarea id="address" name="address" rows="4" cols="30" required></textarea><br><br>
-
-        <label for="telephone">Telephone:</label>
-        <input type="tel" id="telephone" name="telephone" required><br><br>
-
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="course">Course:</label>
-        <input type="text" id="course" name="course" required><br><br>
-
-        <button type="submit">Register</button>
-        <button type="button" onclick="formReset()">Cancel</button>
-    </form>
-
-    <script>
-        function formReset() {
-            document.getElementById("registrationForm").reset();
-        }
-    </script></body>
+</body>
 </html>
